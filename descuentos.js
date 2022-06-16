@@ -21,7 +21,42 @@ function onClickButtonPriceDiscount() {
     resultP.innerText = "El precio con descuento son: $" + precioConDescuento
 }
 
+function onClickCuponDiscount(){
+    const input2Price = document.getElementById("InputPrice2");
+    const price2Value = input2Price.value;
+    const inputCupon = document.getElementById("InputCupon");
+    const inputcupon = inputCupon.value;
 
+    if (inputcupon == 222 )
+    {    
+        const discountValue = 15 ;
+        const precioConDescuento = calcularPrecioConDescuento(price2Value, discountValue);                                    
+        const resultP2 = document.getElementById("ResultP2");        
+        resultP2.innerText = "El precio con su cupon tipo A son: $" + precioConDescuento
+    } 
+    else if (inputcupon == 444 )
+    {   
+         const discountValue = 30 ;
+         const precioConDescuento = calcularPrecioConDescuento(price2Value, discountValue);
+        const resultP2 = document.getElementById("ResultP2");        
+        resultP2.innerText = "El precio con su cupon tipo B son: $" + precioConDescuento
+    }    
+    else if (inputcupon == 667 )
+    {   
+         const discountValue = 50 ;
+         const precioConDescuento = calcularPrecioConDescuento(price2Value, discountValue);
+        const resultP2 = document.getElementById("ResultP2");        
+        resultP2.innerText = "El precio con su cupon tipo C son: $" + precioConDescuento
+    }    
+    else{ 
+        const resultP2 = document.getElementById("ResultP2");        
+        resultP2.innerText = "Cupon invalido"
+        return console.log ({
+            " El numero del cupon ingresado es " :
+              inputCupon,
+        })
+    }
+}
 //console.log({
  //   precioOriginal,
  //   descuento,
