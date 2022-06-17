@@ -1,9 +1,18 @@
 const lista1 = [
-    100,
+    600,
+    300,
+    400,
+    500,  
     200,
+    400,
+    300,
+    1000,
+    700,
+    900,
+    150,
+    430,
     500,
-    800,
-    50000,   
+    280, 
 ];
 
 const mitadLista1 = parseInt(lista1.length / 2);
@@ -17,6 +26,9 @@ function esPar(numerito) {
 
 let mediana
 
+const lista = lista1.sort(function(a, b) {
+    return a - b;
+  });
 if (esPar(lista1.length)){
     const elemento1 = lista1[mitadLista1];
     const elemento2 = lista1[mitadLista1 - 1];
