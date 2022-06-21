@@ -21,3 +21,33 @@ function calcularMediaAritmetica(lista){
     
     return promedioLista
 }
+
+// interaccion html
+const listap = []
+
+function agregarLista() {
+    const input = document.getElementById("InputNumero");
+    const valor = input.value
+    listap.push(valor)
+    const pListaPresult = document.getElementById("pListaP");        
+    pListaPresult.innerText = ( "Tus numeros son " + listap)
+}
+function borrarUltimo() {
+    listap.pop() 
+    const pListaPresult = document.getElementById("pListaP");        
+    pListaPresult.innerText = ( "Tus numeros son " + listap)
+}
+
+function calcularPromedio() {
+    const listap2 = listap.map(Number);
+    const promedio = calcularMediaAritmetica(listap2);
+    const resultP = document.getElementById("ResultP");        
+    resultP.innerText = promedio
+}
+
+function borrarLista() {
+    listap.length = 0
+    const pListaPresult = document.getElementById("pListaP");        
+    pListaPresult.innerText = ( "Tus numeros son " + listap)
+}
+
