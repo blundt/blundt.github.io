@@ -49,5 +49,7 @@ function borrarLista() {
     listap.length = 0
     const pListaPresult = document.getElementById("pListaP");        
     pListaPresult.innerText = ( "Tus numeros son " + listap)
+    const resultP = document.getElementById("ResultP");        
+    resultP.innerText = " "
 }
 
