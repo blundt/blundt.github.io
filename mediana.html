@@ -7,10 +7,42 @@
     <title>Mediana</title>
 </head>
 <body>
+    <a href="./index.html">Home</a>
     <h1>
-        Mediana
+        Calculadora de mediana
     </h1>
-
+    <section id="calculadoraMediana">
+        <h2>Cálcula la mediana ingresando tus valores uno por uno </h2>
+        <form action="">
+            <div>
+                <label for="InputNumero">
+                    Numero para agregar
+                </label>
+                <input id="InputNumero"type="number">
+            </div>
+            <div>
+                <button type="button" onclick="agregarLista()">
+                    Agregar  
+                </button>
+                <button type="button" onclick="borrarUltimo()">
+                  Borrar  
+                </button>
+            </div>
+            <div>
+                <p id="pListaP"></p>
+            </div>
+            <div>
+                <button type="button" onclick="calcularMediana()">
+                    Calcular la media   
+                </button>
+                <p id="ResultP"></p>
+            </div>
+            <div>
+                <button type="button" onclick="borrarLista()">
+                    BorrarLista  
+                </button>
+            </div>
+        </form>
     <script src="./mediana.js"></script>
 </body>
 </html>

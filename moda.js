@@ -1,38 +1,52 @@
-const lista1 = [
-    1,
-    2,
-    3,
-    1,
-    2,
-    2,
-    3,
-    1,
-    1,
-    3,
-    2,
-    3,
-    1,
-    2,
-    1,
-    3,
-]
 
-const lista1Count = {} ;
+function calculadoraModa(lista){
+    const listaCount = {};
 
-lista1.map(
-    function(elemento){
-        if (lista1Count[elemento]){
-            lista1Count[elemento] += 1
-        } 
-        else{
-            lista1Count[elemento] = 1
+    lista.map(
+        function(elemento){
+            if( listaCount[elemento]){
+                listaCount[elemento] += 1
+            }else{
+                listaCount[elemento] = 1
             }
-    }
-);
+        }
+    );
+    const listaArray= Object.entries(listaCount).sort(
+        function (elementoA, elementoB){
+            return elementoA[1] - elementoB[1]
+        }
+    );
+    return moda = listaArray[listaArray.length-1]
+}
+// interaccion html
 
-const lista1Array = Object.entries(lista1Count).sort(
-    function (elementoA, elementoB){
-        return elementoA[1] - elementoB[1];
-    }
-);
-const moda = lista1Array[lista1Array.length-1]
+const listap = []
+
+function agregarLista() {
+    const input = document.getElementById("InputNumero");
+    const valor = input.value
+    listap.push(valor)
+    const pListaPresult = document.getElementById("pListaP");        
+    pListaPresult.innerText = ( "Tus numeros son " + listap)
+}
+function borrarUltimo() {
+    listap.pop() 
+    const pListaPresult = document.getElementById("pListaP");        
+    pListaPresult.innerText = ( "Tus numeros son " + listap)
+}
+
+function calcularModa() {
+    const listap2 = listap.map(Number);
+    const moda = calculadoraModa(listap2);
+    const resultP = document.getElementById("ResultP");        
+    resultP.innerText = ("La moda de tus numeros es " + moda[0] + 
+    " y se repite " + moda[1] + " veces")
+}
+
+function borrarLista() {
+    listap.length = 0
+    const pListaPresult = document.getElementById("pListaP");        
+    pListaPresult.innerText = (listap)
+    const resultP = document.getElementById("ResultP");        
+    resultP.innerText = " "
+}

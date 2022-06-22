@@ -55,7 +55,7 @@ function alturaT(lado1, lado2, base)
 }
 function perimetroTriangulo(lado1, lado2, base)  {
     
-    return (lado1 + lado2 + base);
+    return lado1 + lado2 + base;
 }
 //console.log ("El perimetro del triángulo mide " + perimetroTriangulo + "cm")
 
