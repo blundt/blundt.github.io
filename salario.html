@@ -7,9 +7,44 @@
     <title>Salarios</title>
 </head>
 <body>
-    <h1>Salarios por pais</h1>
+    <a href="./index.html">Home</a>
+    <h1>Calculadora</h1>
+
+    <section id="containerPorcentaje">
+        <h2>
+            Ingresa un nombre y el valor a comparar.
+        </h2>
+        <form>
+            <div>
+                <label for="InputNombre">Nombre:</label>
+
+                <input id="InputNombre">
+            </div>
+            <div>
+                <label for="InputValor">Valor :</label>
+
+                <input id="InputValor" type="number">
+            </div>
+            <button type="button" onclick="addToList()">Agregar a la lista</button>
+            <button type="button" onclick="borrarUltimo()">Borrar ultimo</button>
+            <button type="button" onclick="borrarList()">Eliminar lista</button>
+            <div>
+                <p id="ListaP1">Nombres</p>
+                <p id="ListaP2">Valores</p>
+            </div>    
+        <h3>
+            Calculadora
+        </h3>
+            <button type="button" onclick="PromedioList()">Promedio</button>
+            <p id="PListaP"></p>
+            <button type="button" onclick="MedianaList()">Mediana</button>
+            <p id="MeListaP"></p>
+            <button type="button" onclick="ModaList()">Moda</button>
+            <p id="MoListaP"></p>
+        </form>
+    </section>
 
     <script src="./salario.js"></script>
-    <script src="./salarioAnalisis.js"></script>
+
 </body>
 </html>
